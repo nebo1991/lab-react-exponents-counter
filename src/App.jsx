@@ -11,7 +11,7 @@ import { useState } from "react";
 function App () {
 const [count, setCount] = useState(0);
 
-const decrement = () => setCount((prevCount) => prevCount - 1);
+const decrement = () => setCount((prevCount) => prevCount < 1 ? 0 : prevCount - 1);
 const increment = () => setCount((prevCount) => prevCount + 1);
 
   return (
